@@ -19,17 +19,13 @@
  */
 		
 int main(int argc __attribute__((unused)), char *argv[])
-		
 {
-		
+	// Add a blank line after the opening curly brace.
+
 	printf("%s\n", *argv);
-		
 
-		
+	// Indent the printf() statement by one tab.
+
 	return (0);
-		
 }
-
-
-
 
