@@ -1,23 +1,22 @@
-#include"main.h"
+#include "main.h"
 
 /**
- * get_bit - prog returns the value of a bit at a given index.
- * @n: number to check bits in
- * @index: index at which to check bit
+ * print_binary - prints the binary representation
+ * of a number.
+ * @n: unsigned long int.
  *
- * Return: value of the bit, or -1 if there is an error
+ * Return: no return.
  */
-int get_bit(unsigned long int n, unsigned int index)
+void print_binary(unsigned long int n)
 {
-	unsigned long int divisor, check;
-
-	if (index > (sizeof(unsigned long int) * 8 - 1))
-		return (-1);
-	divisor = 1 << index;
-	check = n & divisor;
-	if (check == divisor)
-		return (1);
-	return (0);
+	if (n >> 0)
+	{
+		if (n >> 1)
+			print_binary(n >> 1);
+		_putchar((n & 1) + '0');
+	}
+	else
+	{
+		_putchar('0');
+	}
 }
-
-
